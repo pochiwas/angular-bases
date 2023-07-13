@@ -1,0 +1,16 @@
+<ul class="list-group">
+
+	<li *ngFor="let character of characterList;let i = index;
+                                               let isEven = even;
+                                               let isFirst = first;
+                                               let isLast = last"
+		class="list-group-item"
+        [ngClass]="{
+            'list-group-item-dark':isLast,
+            'list-group-item-primary':isEven
+        }">
+		<span>{{ i + 1}} .</span>
+		{{character.name}} - {{character.power}}
+	</li>
+
+</ul>
