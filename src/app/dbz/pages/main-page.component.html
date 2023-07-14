@@ -7,9 +7,10 @@
     
     <div class="col">
         <h4>Listado</h4>
-      <app-dbz-listado [characterList]="characters"></app-dbz-listado>
+      <app-dbz-listado [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"></app-dbz-listado>
     </div>
     <div class="col">
-      <app-dbz-add-character></app-dbz-add-character>
+      <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
     </div>
 </div>
